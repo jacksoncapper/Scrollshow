@@ -1,4 +1,4 @@
-<h1>Scrollshow</h1>
+<h1>Scrollshow 1.0.0</h1>
 <p>A carousel library that leverages on the robustness of iScroll</p>
 <p>Documentation to come.</p>
 
