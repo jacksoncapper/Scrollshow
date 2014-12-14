@@ -1,3 +1,5 @@
+/* Scrollshow 1.0.0 ~ Copyright © 2014 Jackson Capper ~ https://github.com/jacksoncapper */
+
 var scrollshowScripts = document.getElementsByTagName("script");
 var scrollshowPath = scrollshowScripts[scrollshowScripts.length - 1].src;
 scrollshowPath = scrollshowPath.substring(0, scrollshowPath.lastIndexOf("/"));
