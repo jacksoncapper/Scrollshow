@@ -245,7 +245,7 @@ var utils = (function () {
 	return me;
 })();
 
-function SlideshowIScroll (el, options) {
+function ScrollshowIScroll (el, options) {
 	this.wrapper = typeof el == 'string' ? document.querySelector(el) : el;
 	this.scroller = this.wrapper.children[0];
 	this.scrollerStyle = this.scroller.style;		// cache style for better performance
@@ -331,7 +331,7 @@ function SlideshowIScroll (el, options) {
 	this.enable();
 }
 
-SlideshowIScroll.prototype = {
+ScrollshowIScroll.prototype = {
 	version: '5.1.3',
 
 	_init: function () {
@@ -2000,12 +2000,12 @@ Indicator.prototype = {
 	}
 };
 
-SlideshowIScroll.utils = utils;
+ScrollshowIScroll.utils = utils;
 
 if ( typeof module != 'undefined' && module.exports ) {
-	module.exports = SlideshowIScroll;
+	module.exports = ScrollshowIScroll;
 } else {
-	window.SlideshowIScroll = SlideshowIScroll;
+	window.ScrollshowIScroll = ScrollshowIScroll;
 }
 
 })(window, document, Math);
