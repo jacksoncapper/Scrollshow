@@ -18,17 +18,6 @@ Scrollshow.start = function(scrollshowX, interval){
 	interval = interval != null ? interval : 8000;
 	scrollshowX.interval = interval;
 	
-	scrollshowX.className = scrollshowX.className + " scrollshow";
-	
-	var iScrollDiv = document.createElement("div");
-	iScrollDiv.className = "iscroll";
-	for(var i = 0; i < scrollshowX.childNodes.length; i++)
-		if(scrollshowX.childNodes[i].nodeType == 1){
-			iScrollDiv.appendChild(scrollshowX.childNodes[i]);
-			i--;
-		}
-	scrollshowX.appendChild(iScrollDiv);
-	
 	function next(){
 		if(scrollshowX.iscroll.x == scrollshowX.iscroll.maxScrollX)
 			scrollshowX.iscroll.goToPage(0, 0);
@@ -42,6 +31,17 @@ Scrollshow.start = function(scrollshowX, interval){
 	}
 	
 	if(scrollshowX.iscroll == null){
+		scrollshowX.className = scrollshowX.className + " scrollshow";
+	
+		var iScrollDiv = document.createElement("div");
+		iScrollDiv.className = "iscroll";
+		for(var i = 0; i < scrollshowX.childNodes.length; i++)
+			if(scrollshowX.childNodes[i].nodeType == 1){
+				iScrollDiv.appendChild(scrollshowX.childNodes[i]);
+				i--;
+			}
+		scrollshowX.appendChild(iScrollDiv);
+		
 		scrollshowX.iscroll = new ScrollshowIScroll(scrollshowX, {
 			snap: true,
 			scrollX: true,
