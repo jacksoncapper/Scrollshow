@@ -45,7 +45,9 @@ Scrollshow.start = function(scrollshowX, interval){
 		scrollshowX.iscroll = new ScrollshowIScroll(scrollshowX, {
 			snap: true,
 			scrollX: true,
-			scrollY: false
+			scrollY: false,
+			eventPassthrough: true,
+			preventDefault: false
 		});
 		scrollshowX.iscroll.on("scrollStart", function(){ clearInterval(scrollshowX.autoInterval); });
 		scrollshowX.iscroll.on("scrollEnd", reset);
